@@ -1,0 +1,1 @@
+ALTER TABLE `ingreso_productos` ADD `fecha_vencimiento` DATE NULL AFTER `fecha_ingreso`;
