@@ -20,9 +20,16 @@ class CreateInscripcionsTable extends Migration
             $table->string("disciplina", 255);
             $table->unsignedBigInteger("sucursal_id");
             $table->date("fecha_inscripcion");
+            $table->date("fecha_pivote")->nullable();
+            $table->integer("conteo");
+            $table->integer("restante");
+            $table->integer("pausa");
+            $table->date("fecha_pausa")->nullable();
             $table->date("fecha_fin");
             $table->string("codigo_rfid")->unique();
-            $table->string("estado_cobro");
+            $table->string("estado", 155);
+            $table->string("estado_cobro", 155);
+            $table->text("justificacion")->nullable();
             $table->date("fecha_registro");
             $table->timestamps();
 

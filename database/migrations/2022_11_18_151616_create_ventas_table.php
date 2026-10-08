@@ -18,6 +18,7 @@ class CreateVentasTable extends Migration
             $table->unsignedBigInteger("sucursal_id");
             $table->unsignedBigInteger("cliente_id");
             $table->decimal("total", 24, 2);
+            $table->string("qr", 255)->nullable();
             $table->date("fecha");
             $table->date("fecha_registro");
             $table->timestamps();

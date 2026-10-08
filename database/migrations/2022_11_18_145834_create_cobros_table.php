@@ -16,8 +16,9 @@ class CreateCobrosTable extends Migration
         Schema::create('cobros', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("cliente_id");
-            $table->unsignedBigInteger("inscripcion_id");
             $table->unsignedBigInteger("sucursal_id");
+            $table->unsignedBigInteger("inscripcion_id");
+            $table->string("qr", 255)->nullable();
             $table->date("fecha_cobro");
             $table->date("fecha_registro");
             $table->timestamps();

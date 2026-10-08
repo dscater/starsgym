@@ -19,6 +19,7 @@ class CreateIngresoProductosTable extends Migration
             $table->unsignedBigInteger("producto_id");
             $table->integer("cantidad");
             $table->date("fecha_ingreso");
+            $table->date("fecha_vencimiento")->nullable();
             $table->date("fecha_registro");
             $table->timestamps();
 
